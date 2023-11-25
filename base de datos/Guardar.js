@@ -1,9 +1,12 @@
-
-
+// Version: 1.0
+// Guardar.js
 function guardar(){
+    let contraseña = document.getElementById('contraseña').value;
+    let nombre = document.getElementById('nombre').value;
+    
     db.collection("login").add({
-        contraseña: document.getElementById("contraseña").value,
-        nombre: document.getElementById("nombre").value,
+        contraseña: contraseña,
+        nombre: nombre
     })
     .then((docRef) => {
         alert("Se guardo correctamente"); 
@@ -12,3 +15,6 @@ function guardar(){
         alert("Error al guardar");
     });
 }
+
+// Hacer la función globalmente accesible
+window.guardar = guardar;
