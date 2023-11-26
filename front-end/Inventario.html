@@ -19,8 +19,23 @@
                   <label for="cantidadItem" class="form-label">Cantidad</label>
                   <input type="number" class="form-control" id="cantidadItem">
                 </div>
-                <a href="#" class="btn btn-primary" onclick="agregarItem()">Agregar artículo</a>
+                <div class="mb-3">
+                    <label for="cantidadItem" class="form-label">Subcantidad</label>
+                    <input type="number" class="form-control" id="subCantidadItem">
+                </div>
+                
             </form>
+            <div class="botonAgregar">
+                <a href="#" class="btn btn-primary" onclick="agregarItem()">Agregar artículo</a>
+            </div>
+            <div class="botonVer">
+                <a href="#" class="btn btn-primary" onclick="verItems()">Ver items</a>
+            </div>
+            <div>
+                <a href="#" class="btn btn-primary" onclick="eliminarItems()">Eliminar items</a>
+            </div>
+            
+            <div id="items"></div>
         </div>
     </div>
 </body>
@@ -32,4 +47,7 @@
 <script type="module" src="/back_end/inventario.js"></script>
 <script type="module" src="/base de datos/GuardarInventario.js"></script>
 <script type="module" src="/base de datos/Configuracion.js"></script>
+<script type="module" src="/back_end/actualizarInventario.js"></script>
+<script type="module" src="/back_end/borrarInventario.js"></script>
+<script type="module" src="/back_end/verInventario.js"></script>
 </html>
