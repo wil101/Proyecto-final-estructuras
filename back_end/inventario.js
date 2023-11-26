@@ -4,7 +4,7 @@ function agregarItem() {
     let cantidadItem = document.getElementById('cantidadItem').value;
 
     // Agregar el item al inventario en Firebase
-    db.collection("inventario").add({
+    db.collection("Inventario").add({
         nombre: nombreItem,
         cantidad: cantidadItem
     })
@@ -18,3 +18,9 @@ function agregarItem() {
 
 // Hacer la función globalmente accesible
 window.agregarItem = agregarItem;
+
+if (!firebase.apps.length) {
+    console.log("Firebase no se ha inicializado");
+} else {
+    console.log("Firebase se ha inicializado correctamente");
+}

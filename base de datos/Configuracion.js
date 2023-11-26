@@ -19,4 +19,9 @@ var db = firebase.firestore();
 
 // Hacer la referencia a la base de datos globalmente accesible
 window.db = db;
+if (!firebase.apps.length) {
+  console.log("Firebase no se ha inicializado");
+} else {
+  console.log("Firebase se ha inicializado correctamente");
+}
 
