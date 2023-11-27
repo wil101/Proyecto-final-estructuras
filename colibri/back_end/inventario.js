@@ -1,9 +1,6 @@
 // Inventario 1.5
-function agregarItem() {
-    let nombreItem = document.getElementById('nombreItem').value;
-    let cantidadItem = document.getElementById('cantidadItem').value;
-    let subCantidadItem = document.getElementById('subCantidadItem').value;
-
+import { useState } from 'react';
+function agregarItem(nombreItem, cantidadItem, subCantidadItem) {
     // Agregar el item al inventario en Firebase
     db.collection("Inventario").add({
         nombre: nombreItem,
@@ -20,13 +17,4 @@ function agregarItem() {
     });
 }
 
-
-
-
-
-
-
-// Hacer las funciones globalmente accesibles
-window.agregarItem = agregarItem;
-
-
+export default agregarItem;
