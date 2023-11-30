@@ -1,0 +1,57 @@
+#ventaForm{
+    position: absolute;
+    top: 30px;
+    left: 35%;
+    height: 600px;
+    width: 35%;
+    background-color: white;
+    border: 3px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#summary-info{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid blue;
+    padding-bottom: 20px;
+    padding-top: 5px;
+} 
+
+#summary-info-item{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1px;
+} 
+
+#medioPago{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    background-color:white;
+    color: black;
+    border-color: black;
+    margin-bottom: 15px;
+}
+
+#env-btn{
+    width: auto;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    background-color:white;
+    color: black;
+    border-color: black;
+}

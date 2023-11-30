@@ -9,33 +9,39 @@
 <body>
     <form id="ventaForm">
         <div>
-            <label for="medioPago">Medio de Pago:</label><br>
+            <h2>Medio de Pago:</h2>
             <select id="medioPago" name="medioPago">
                 <option value="efectivo">Efectivo</option>
                 <option value="tarjeta">Tarjeta</option>
             </select><br>
         </div>
-        <div>
-            <label for="producto">producto </label><br>
-            <input type="text" id="producto" name="producto"><br>
+        <div id="summary-info">
+
+            <div id = "summary-info-item">
+                <label for="producto">Producto </label><br>
+                <input type="text" id="producto" name="producto"><br>
+            </div>
+            <div id = "summary-info-item">
+                <label for="cantidad">Cantidad:</label><br>
+                <input type="number" id="cantidad" name="cantidad"><br>
+            </div>  
+            <div id = "summary-info-item">
+                <label for="cantidad">Valor unitario:</label><br>
+                <input type="number" id="valorUnitario" name="cantidad"><br>
+            </div>  
+            <div id = "summary-info-item">
+                <label for="cantidad">Valor total</label><br>
+                <input type="number" id="valorTotal" name="cantidad"><br>
+            </div>  
+            <div id = "summary-info-item">
+                <label for="producto">Detalle pedido  </label><br>
+                <input type="text" id="detallePedido" name="detallepedido"><br>
+            </div>
+
         </div>
+
         <div>
-            <label for="cantidad">Cantidad:</label><br>
-            <input type="number" id="cantidad" name="cantidad"><br>
-        </div>  
-        <div>
-            <label for="cantidad">Valor unitario:</label><br>
-            <input type="number" id="valorUnitario" name="cantidad"><br>
-        </div>  <div>
-            <label for="cantidad">Valor total</label><br>
-            <input type="number" id="valorTotal" name="cantidad"><br>
-        </div>  
-        <div>
-            <label for="producto">Detalle pedido  </label><br>
-            <input type="text" id="detallePedido" name="detallepedido"><br>
-        </div>
-        <div>
-            <button onclick="realizarSolicitudPOST('/facturacion', {})">generar factura</button>
+            <button id = "env-btn" onclick="realizarSolicitudPOST('/facturacion', {})">Generar factura</button>
         </div>
     </form>
     
