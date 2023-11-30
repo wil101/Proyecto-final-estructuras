@@ -1,0 +1,36 @@
+.nav{
+    width: 1343px;
+    height: 164px;
+    flex-shrink: 0;
+    background-color: #3e8e41;
+}
+
+.logoimg {
+    width: 128px;
+    height: 127px;
+    right: 300px;
+    left: 30px;
+    
+}
+
+
+
+.botonInventario,
+.botonVentas {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center; /* Center the content horizontally */
+}
+.botonInventario:button,
+.botonVentas:button {
+    background-color: #3e8e41;
+}
+
+

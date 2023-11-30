@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+body {
+  position: relative;
+  height: 100%;
+  min-height: 50vw;
+  background: white;
+}
+.panel-requests {
+  margin: 30px;
+  width: 20%;
+  height: 700px;
+  list-style: None;
+  font-size: 1.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.users {
+  height: 100px;
+  background-color: #c5c5c5;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+}
+
+.users img {
+  margin-left: 5px;
+}
+
+.users p {
+  width: 50%;
+  margin: 10px 0px 10px 10px;
+}
+
+.acp-btn {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border-radius: 100%;
+  border-color: green;
+  margin-right: 0.5em;
+}
+.rej-btn {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 100%;
+  border-color: red;
+  margin-right: 0.5em;
+}
+.info {
+  position: absolute;
+  top: 150px;
+  left: 35%;
+  height: 700px;
+  width: 30%;
+  background-color: white;
+  border: 3px solid blue;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.description {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.description p {
+  width: 450px;
+  font-size: 1rem;
+}
+.bordeazul {
+  padding: 10px 0 10px 0;
+  border-bottom: 0.8px solid rgb(0, 117, 234);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#equis {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: white;
+  color: blue;
+  border-color: white;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.acp-btn2 {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+.rej-btn2 {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+.comment-input {
+  width: 450px;
+  height: 150px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}

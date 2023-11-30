@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="ventas.css">
+</head>
+<body>
+    <form id="ventaForm">
+        <div>
+            <label for="medioPago">Medio de Pago:</label><br>
+            <select id="medioPago" name="medioPago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="productos">Productos:</label><br>
+            <input type="text" id="productos" name="productos"><br>
+        </div>
+        <div>
+            <label for="detallePedido">Detalle Pedido:</label><br>
+            <input type="text" id="detallePedido" name="detallePedido"><br>
+        </div>
+        <div>
+            <label for="fechaPago">Fecha de Pago:</label><br>
+            <input type="date" id="fechaPago" name="fechaPago"><br>
+        </div>
+        <div>
+            <label for="precioUnitario">Precio Unitario:</label><br>
+            <input type="number" id="precioUnitario" name="precioUnitario"><br>
+        </div>
+        <div>
+            <label for="valorTotal">Valor Total:</label><br>
+            <input type="number" id="valorTotal" name="valorTotal"><br>
+        </div>
+        <div>
+            <button onclick="realizarSolicitudPOST('/facturacion', {})">Generar Factura</button>
+        </div>
+    </form>
+    <script type="module" src="/back_end/facturacion.js"></script>
+</body>
+</html>
