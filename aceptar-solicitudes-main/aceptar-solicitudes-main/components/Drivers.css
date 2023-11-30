@@ -1,0 +1,14 @@
+.info-Drivers {
+  padding: 10px 0 10px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.8px solid rgb(0, 117, 234);
+}
+
+.info-Drivers img {
+  background-color: rgb(0, 109, 218);
+  border-radius: 100%;
+  border: rgb(0, 128, 255) 2px solid;
+}

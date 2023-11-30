@@ -1,0 +1,129 @@
+.state {
+  width: 300px;
+  height: 175px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  border: 1px solid #e6e6e6;
+}
+.state p {
+  font-size: 0.8rem;
+}
+.title {
+  margin: 5px 0 10px 0;
+}
+.stateButton {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+.DeleteAcount {
+  margin-top: 10px;
+  width: 100%;
+}
+.DeleteAcount a {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+.DeleteAcount:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+}
+.color {
+  position: absolute;
+  top: -70px;
+  right: -20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgb(111, 255, 44);
+}
+.color-true {
+  background-color: rgb(255, 185, 44);
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 30px;
+}
+.search {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.search a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.search:hover {
+  background-color: rgb(234, 234, 234);
+}
+.slider-round {
+  border-radius: 30px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e6e6e6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider-round:before {
+  border-radius: 30px;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #1976d2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider-round {
+  background-color: #e6e6e6;
+  border-radius: 30px;
+}
+input:focus + .slider-round {
+  box-shadow: 0 0 1px #f0f0f0;
+}
+input:checked + .slider-round:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  border-radius: 30px;
+}
