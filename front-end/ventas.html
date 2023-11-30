@@ -8,12 +8,37 @@
 </head>
 <body>
     <form id="ventaForm">
-        <label for="producto">Producto:</label><br>
-        <input type="text" id="producto" name="producto"><br>
-        <label for="cantidad">Cantidad:</label><br>
-        <input type="number" id="cantidad" name="cantidad"><br>
-        <input type="submit" value="Realizar venta">
+        <div>
+            <label for="medioPago">Medio de Pago:</label><br>
+            <select id="medioPago" name="medioPago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="producto">producto </label><br>
+            <input type="text" id="producto" name="producto"><br>
+        </div>
+        <div>
+            <label for="cantidad">Cantidad:</label><br>
+            <input type="number" id="cantidad" name="cantidad"><br>
+        </div>  
+        <div>
+            <label for="cantidad">Valor unitario:</label><br>
+            <input type="number" id="valorUnitario" name="cantidad"><br>
+        </div>  <div>
+            <label for="cantidad">Valor total</label><br>
+            <input type="number" id="valorTotal" name="cantidad"><br>
+        </div>  
+        <div>
+            <label for="producto">Detalle pedido  </label><br>
+            <input type="text" id="detallePedido" name="detallepedido"><br>
+        </div>
+        <div>
+            <button onclick="realizarSolicitudPOST('/facturacion', {})">generar factura</button>
+        </div>
     </form>
+    
 </body>
-<script type="module" src="/back_end/ventas.js"></script>
+<script type="module" src="/back_end/facturacion.js"></script>
 </html>

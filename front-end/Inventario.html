@@ -12,7 +12,7 @@
         <div class="row">
             <form>
                 <div class="mb-3">
-                  <label for="nombreItem" class="form-label">Nombre del artículo</label>
+                  <label for="nombreItem" class="form-label">Nombre del producto</label>
                   <input type="text" class="form-control" id="nombreItem">
                 </div>
                 <div class="mb-3">
@@ -20,8 +20,16 @@
                   <input type="number" class="form-control" id="cantidadItem">
                 </div>
                 <div class="mb-3">
-                    <label for="cantidadItem" class="form-label">Subcantidad</label>
-                    <input type="number" class="form-control" id="subCantidadItem">
+                    <label for="cantidadItem" class="form-label">Costo</label>
+                    <input type="number" class="form-control" id="cantidadCosto">
+                  </div>
+                  <div class="mb-3">
+                    <label for="cantidadItem" class="form-label">tipo de subProducto</label>
+                    <input type="number" class="form-control" id="cantidadSubproducot">
+                  </div>
+                <div class="mb-3">
+                    <label for="cantidadItem" class="form-label">cantidad subProducto</label>
+                    <input type="number" class="form-control" id="subCantidadSubproducto">
                 </div>
                 
             </form>
@@ -39,15 +47,5 @@
         </div>
     </div>
 </body>
-<!-- importo Firebase -->
-<script type="module" src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-<!-- Importo archivos -->
 <script type="module" src="/back_end/inventario.js"></script>
-<script type="module" src="/base de datos/GuardarInventario.js"></script>
-<script type="module" src="/base de datos/Configuracion.js"></script>
-<script type="module" src="/back_end/actualizarInventario.js"></script>
-<script type="module" src="/back_end/borrarInventario.js"></script>
-<script type="module" src="/back_end/verInventario.js"></script>
 </html>

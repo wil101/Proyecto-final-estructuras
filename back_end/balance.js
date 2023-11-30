@@ -1,55 +1,61 @@
-// Balance 1.0
-function agregarIngreso(monto) {
-    // Agregar el ingreso a la base de datos
-    db.collection("Balance").add({
-        tipo: 'Ingreso',
-        monto: monto,
-        fecha: new Date()
-    })
-    .then((docRef) => {
-        alert("Ingreso agregado correctamente");
-    })
-    .catch((error) => {
-        alert("Error al agregar ingreso");
+const express = require('express');
+const router = express.Router();
+const db = require('./base de datos/Configuracion.js');
+
+// Operaciones CRUD para la tabla "balance"
+//añadir servicio en balance
+app.post('/balance', (req, res) => {
+    const { nombreDeServicio, costoServicio, fechaDePago, periodicidad } = req.body;
+    const query = 'INSERT INTO balance (nombreDeServicio, costoServicio, fechaDePago, periodicidad) VALUES (?, ?, ?, ?)';
+    db.query(query, [nombreDeServicio, costoServicio, fechaDePago, periodicidad], (err, result) => {
+      if (err) {
+        console.error('Error al insertar en balance:', err);
+        res.status(500).send('Error al insertar en balance');
+      } else {
+        res.send('Servicio añadido exitosamente');
+      }
     });
-}
-
-function agregarGasto(tipoGasto, monto) {
-    // Agregar el gasto a la base de datos
-    db.collection("Balance").add({
-        tipo: tipoGasto,
-        monto: monto,
-        fecha: new Date()
-    })
-    .then((docRef) => {
-        alert("Gasto agregado correctamente");
-    })
-    .catch((error) => {
-        alert("Error al agregar gasto");
+  });
+  //obtener servicio en balance
+  app.get('/balance', (req, res) => {
+    db.query('SELECT * FROM balance', (err, result) => {
+      if (err) {
+        console.error('Error al obtener balance:', err);
+        res.status(500).send('Error al obtener balance');
+      } else {
+        res.json(result);
+      }
     });
-}
-
-function obtenerBalance() {
-    let ingresos = 0;
-    let gastos = 0;
-
-    // Obtener los ingresos y gastos de la base de datos
-    db.collection("Balance").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            if (doc.data().tipo === 'Ingreso') {
-                ingresos += doc.data().monto;
-            } else {
-                gastos += doc.data().monto;
-            }
-        });
-
-        // Calcular el balance
-        let balance = ingresos - gastos;
-        alert("El balance es: " + balance);
+  });
+  //actualizar servicio en balance
+  app.put('/balance/:id', (req, res) => {
+    const id = req.params.id;
+    const { nombreDeServicio, costoServicio, fechaDePago, periodicidad } = req.body;
+    const query = 'UPDATE balance SET nombreDeServicio=?, costoServicio=?, fechaDePago=?, periodicidad=? WHERE id=?';
+    db.query(query, [nombreDeServicio, costoServicio, fechaDePago, periodicidad, id], (err, result) => {
+      if (err) {
+        console.error('Error al actualizar balance:', err);
+        res.status(500).send('Error al actualizar balance');
+      } else {
+        res.send('Servicio actualizado exitosamente');
+      }
     });
-}
+  });
+  //eliminar servicio en balance
+  app.delete('/balance/:id', (req, res) => {
+    const id = req.params.id;
+    const query = 'DELETE FROM balance WHERE id=?';
+    db.query(query, [id], (err, result) => {
+      if (err) {
+        console.error('Error al borrar servicio del balance:', err);
+        res.status(500).send('Error al borrar servicio del balance');
+      } else {
+        res.send('Servicio borrado exitosamente');
+      }
+    });
+  });
 
-// Hacer las funciones globalmente accesibles
-window.agregarIngreso = agregarIngreso;
-window.agregarGasto = agregarGasto;
-window.obtenerBalance = obtenerBalance;
+
+
+
+module.exports = router;
