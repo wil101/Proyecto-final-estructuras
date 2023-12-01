@@ -24,9 +24,9 @@
   height: 40px;
   border-radius: 15px;
   font-size: 1rem;
-  background-color: #1976d2;
+  background-color: #e64d1f;
   color: white;
-  border-color: #1976d2;
+  border-color: #e64d1f;
 }
 
 .summary-info {
@@ -37,8 +37,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid #1976d2;
-  border-top: 1px solid #1976d2;
+  border-bottom: 1px solid #e64d1f;
+  border-top: 1px solid #e64d1f;
 }
 
 #user-img {
@@ -48,6 +48,6 @@
   width: 84px;
   height: 84px;
   border-radius: 100%;
-  border: 0px solid #1976d2;
-  background-color: #1976d2;
+  border: 0px solid #e64d1f;
+  background-color: #e64d1f;
 }

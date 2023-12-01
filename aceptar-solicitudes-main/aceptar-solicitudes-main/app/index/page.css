@@ -65,7 +65,7 @@ body{
     height: 600px;
     width: 35%;
     background-color: white;
-    border: 3px solid blue;
+    border: 3px solid #e64d1f;
     border-radius: 20px;
 }
 
@@ -97,7 +97,7 @@ body{
     width: 200px;
     height: 50px;
     font-size: 2rem;
-    background-color: #1976d2;
+    background-color: #e64d1f;
     color: white;
     border-color: white;
     border-radius: 5%;
@@ -107,15 +107,15 @@ body{
     height: 50px;
     font-size: 2rem;
     background-color: rgb(255, 255, 255);
-    color: #1976d2;
-    border-color: blue;
+    color: #e64d1f;
+    border-color: #e64d1f;
     border-radius: 5%;
 }
 
 #equis {
     border-radius: 100%;
     padding: 0.8em;
-    border: 2px solid blue;
+    border: 2px solid #e64d1f;
     background-color: white;
     margin: 1em 0 0 1em;
 }

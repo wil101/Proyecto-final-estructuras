@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.6",
     "next": "^13.5.6",

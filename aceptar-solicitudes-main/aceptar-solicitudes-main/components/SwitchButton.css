@@ -60,12 +60,12 @@
 }
 
 input:checked + .slider-round {
-    background-color: blue;
+    background-color: #e64d1f;
     border-radius: 30px;
 }
 
 input:focus + .slider-round {
-    box-shadow: 0 0 1px blue;
+    box-shadow: 0 0 1px #e64d1f;
 }
 
 input:checked + .slider-round:before {

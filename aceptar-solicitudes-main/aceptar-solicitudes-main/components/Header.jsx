@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <h1>COLIBRÍ CAFÉ - BAR</h1>
-      <img src={"/logo.jpeg"} alt="" width={"80"} height={"80"} />
+      <img class="logo" src={"/logo.jpeg"} alt="" width={"80"} height={"80"} />
     </header>
   );
 }
